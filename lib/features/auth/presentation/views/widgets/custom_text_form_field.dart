@@ -6,14 +6,16 @@ import '../../../../../core/utils/styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.hintText,
+    required this.hintText, this.controller,
   });
 
   final String hintText;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller:controller ,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.only(left: 15,),
         filled: true,

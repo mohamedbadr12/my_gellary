@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 
 import 'core/app_router/app_router.dart';
 import 'core/app_router/routes.dart';
+import 'core/utils/dependency_injection.dart';
 
 void main() {
+  ServicesLocator.init();
   runApp(DevicePreview(
     builder: (context) =>const MyGallery() ,
        ));
