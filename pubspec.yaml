@@ -84,6 +84,8 @@ flutter:
     - family: segoe ui
       fonts:
         - asset: assets/fonts/Segoe UI.ttf
+        - asset: assets/fonts/Segoe UI Bold.ttf
+          weight: 700
 
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

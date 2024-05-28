@@ -1,5 +1,5 @@
 class AppAssets{
 
-  static String loginImage="assets/images/image4.jpg";
+  static String loginImage="assets/images/Group 16.jpg";
 
 }
