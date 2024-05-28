@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_gellary/features/auth/presentation/manger/login/login_cubit.dart';
@@ -14,24 +13,24 @@ class LoginContainerAddField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<LoginCubit,LoginState>(listener: (context, state) {
-      if(state is LoginSuccess){
-ScaffoldMessenger.of(context).showSnackBar(
-  const SnackBar(
-    content: Text("Login Success"),
-  ),
-);
-Navigator.pushNamed(context,"");
-      }
-      if(state is LoginFailure){
-ScaffoldMessenger.of(context).showSnackBar(
-  SnackBar(
-    content: Text(state.errorMessage),
-  ),
-);
-      }
-
-    },
+    return BlocConsumer<LoginCubit, LoginState>(
+      listener: (context, state) {
+        if (state is LoginSuccess) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Login Success"),
+            ),
+          );
+          Navigator.pushNamed(context, "");
+        }
+        if (state is LoginFailure) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(state.errorMessage),
+            ),
+          );
+        }
+      },
       builder: (context, state) {
         return Align(
           alignment: Alignment.bottomCenter,
@@ -40,7 +39,6 @@ ScaffoldMessenger.of(context).showSnackBar(
               bottom: 150,
               right: 40,
               left: 40,
-
             ),
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 40),
@@ -57,23 +55,32 @@ ScaffoldMessenger.of(context).showSnackBar(
                       "LOG IN",
                       style: Styles.textStyle30Bold(context),
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     CustomTextFormField(
-                      controller:context.read<LoginCubit>().email,
+                      controller: context.read<LoginCubit>().email,
                       hintText: "User Name",
                     ),
                     const SizedBox(
                       height: 24,
                     ),
-                     CustomTextFormField(
+                    CustomTextFormField(
                       controller: context.read<LoginCubit>().password,
                       hintText: "Password",
                     ),
-                    const SizedBox(height: 24,),
-                     state is LoginLoading ? const Center(child: CircularProgressIndicator(),) :CustomButton(onTap: (){
-                      context.read<LoginCubit>().userLogin();
-                    },),
-
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    state is LoginLoading
+                        ? const Center(
+                            child: CircularProgressIndicator(),
+                          )
+                        : CustomButton(
+                            onTap: () {
+                              context.read<LoginCubit>().userLogin();
+                            },
+                          ),
                   ],
                 ),
               ),
