@@ -5,6 +5,8 @@ import 'package:my_gellary/features/auth/data/data_source/login_remote_data_sour
 import 'package:my_gellary/features/auth/data/repositry/login_repo.dart';
 import 'package:my_gellary/features/auth/presentation/manger/login/login_cubit.dart';
 
+import '../api/api_consumer.dart';
+
 
 final sl = GetIt.instance;
 
@@ -13,7 +15,7 @@ class ServicesLocator {
     sl.registerLazySingleton<LoginCubit>(() => LoginCubit(sl()));
     sl.registerLazySingleton<LoginRepo>(() =>  LoginRepo(loginRemoteDataSource: sl()));
     sl.registerLazySingleton<LoginRemoteDataSource>(() =>  LoginRemoteDataSource(apiConsumer: sl()));
-    sl.registerLazySingleton<DioConsumer>(() => DioConsumer(sl()));
+    sl.registerLazySingleton<ApiConsumer>(() => DioConsumer(sl()));
     sl.registerLazySingleton<Dio>(() => Dio());
 
   }

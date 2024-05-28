@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_gellary/features/auth/presentation/manger/login/login_cubit.dart';
@@ -22,6 +21,7 @@ ScaffoldMessenger.of(context).showSnackBar(
     content: Text("Login Success"),
   ),
 );
+Navigator.pushNamed(context,"");
       }
       if(state is LoginFailure){
 ScaffoldMessenger.of(context).showSnackBar(
