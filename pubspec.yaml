@@ -89,11 +89,10 @@ flutter:
         - asset: assets/fonts/Segoe UI Bold.ttf
           weight: 700
 
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    - family: BalooThambi2
+      fonts:
+        - asset: assets/fonts/baloo font/BalooThambi2-VariableFont_wght.ttf
+
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
