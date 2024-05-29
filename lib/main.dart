@@ -14,7 +14,7 @@ void main() {
   Bloc.observer = SimpleBlocObserver();
   CacheHelper().init();
   runApp(DevicePreview(
-    enabled: true,
+    enabled: false,
     builder: (context) => const MyGallery(),
   ));
 }

@@ -28,3 +28,18 @@ class HomeFailure extends HomeState {
   @override
   List<Object> get props => [message];
 }
+
+class ImagePickedSuccess extends HomeState {}
+
+class ImagePickedFailure extends HomeState {
+  final String message;
+
+  const ImagePickedFailure({required this.message});
+
+  @override
+  List<Object> get props => [message];
+}
+
+class ImagePickedLoading extends HomeState {}
+
+class UploadProfile extends HomeState {}
