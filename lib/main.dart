@@ -14,9 +14,9 @@ void main() {
   Bloc.observer = SimpleBlocObserver();
   CacheHelper().init();
   runApp(DevicePreview(
-    enabled: false,
-    builder: (context) =>const MyGallery() ,
-       ));
+    enabled: true,
+    builder: (context) => const MyGallery(),
+  ));
 }
 
 class MyGallery extends StatelessWidget {
@@ -24,8 +24,8 @@ class MyGallery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      initialRoute: Routes.loginRoute,
+    return MaterialApp(
+      initialRoute: Routes.homeGalleryRoute,
       onGenerateRoute: AppRouter.generateRoute,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

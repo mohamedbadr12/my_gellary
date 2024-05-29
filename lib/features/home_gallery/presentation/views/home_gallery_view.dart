@@ -7,7 +7,11 @@ class HomeGalleryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: HomeGalleryViewBody(),
+      backgroundColor: Color(0xffddcdff),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 18, vertical: 25),
+        child: HomeGalleryViewBody(),
+      ),
     );
   }
 }

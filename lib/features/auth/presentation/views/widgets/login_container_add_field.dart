@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_gellary/features/auth/presentation/manger/login/login_cubit.dart';
 
+import '../../../../../core/app_router/routes.dart';
 import '../../../../../core/utils/styles.dart';
 import 'custom_button.dart';
 import 'custom_text_form_field.dart';
@@ -21,7 +22,7 @@ class LoginContainerAddField extends StatelessWidget {
               content: Text("Login Success"),
             ),
           );
-          Navigator.pushNamed(context, "");
+          Navigator.pushNamed(context, Routes.homeGalleryRoute);
         }
         if (state is LoginFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
