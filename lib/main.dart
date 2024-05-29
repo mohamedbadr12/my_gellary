@@ -25,7 +25,7 @@ class MyGallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: Routes.homeGalleryRoute,
+      initialRoute: Routes.loginRoute,
       onGenerateRoute: AppRouter.generateRoute,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
