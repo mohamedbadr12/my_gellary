@@ -17,6 +17,7 @@ class HomeRepo {
     try {
       final response = await _homeRemoteDataSource.getHomeData();
       var homeModel = HomeModel.fromJson(response);
+      //final listData = List<HomeModel>.from((response as List).map((e) => HomeModel.fromJson(e)));
 
       return Right(homeModel);
     } on ServerException catch (e) {
