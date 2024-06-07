@@ -32,7 +32,7 @@ class MyGallery extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'segoe ui',
       ),
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
     );
   }
 }
